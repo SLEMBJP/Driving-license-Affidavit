@@ -1,0 +1,116 @@
+
+<!doctype html>
+<html lang="en">
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Affidavit Form</title>
+    <link rel="stylesheet" href="styles.css">
+    <!--<script src="scripts.js"></script>-->
+
+    </head>
+
+    <body>
+
+        <h1 class="title"><u>AFFIDAVIT</u></h1>
+        <p class="description">
+            Please fill the below details accordingly. This is to produce your Affidavit for the Embassy of Sri Lanka.
+        </p>
+        
+        <div class="form-container">
+            <form id="affidavit" name="Details" action="/affidavitpage.html" method="post">
+                <div class="form-group">
+                    <label for="FullName">Full Name</label>
+                    <input type="text" id="FullName" name="FullName" placeholder="John Doe" required minlength="10" maxlength="300">
+                </div>
+    
+                <div class="form-group">
+                    <label for="Address">Address</label>
+                    <input type="text" id="Address" name="Address" placeholder="ABC411, Aomi, Tokyo, Japan" required minlength="10" maxlength="500">
+                </div>
+    
+                <div class="form-group">
+                    <label for="PassportNumber">Passport Number</label>
+                    <input type="text" id="PassportNumber" name="PassportNumber" placeholder="N1234567" required minlength="5" maxlength="12">
+                </div>
+    
+                <div class="form-group">
+                    <label for="PassportIssuedDate">Passport Issued Date</label>
+                    <input type="date" id="PassportIssuedDate" name="PassportIssuedDate" min="1900-01-01" max="2100-01-01" required>
+                </div>
+    
+                <div class="form-group">
+                    <label for="NameInDriverLicense">Name in Driver License</label>
+                    <input type="text" id="NameInDriverLicense" name="NameInDriverLicense" placeholder="John Doe" required minlength="10">
+                </div>
+    
+                <div class="form-group">
+                    <label for="DriverLicenseNumber">Driving License Number</label>
+                    <input type="text" id="DriverLicenseNumber" name="DriverLicenseNumber" placeholder="B1234567" required minlength="6" maxlength="12">
+                </div>
+    
+                <div class="form-group">
+                    <label for="DriverLicenseIssuedDate">Driver License Issued Date</label>
+                    <input type="date" id="DriverLicenseIssuedDate" name="DriverLicenseIssuedDate" min="1900-01-01" max="2100-01-01" required>
+                </div>
+    
+                <div class="form-group">
+                    <label for="AppointmentDate">Appointment Date in Embassy</label>
+                    <input type="date" id="AppointmentDate" name="AppointmentDate" min="1900-01-01" max="2100-01-01" required>
+                </div>
+    
+                <div class="download-button" style="display: flex; gap: 10px;">
+                    <input type="reset" value="Reset">
+                    <input type="submit" value="Submit">
+                </div>
+            </form>
+        </div>
+
+    <script>
+        const form = document.getElementById('affidavit');
+        const FullName = document.getElementById('FullName');
+        const Address = document.getElementById('Address');
+        const PassportNumber = document.getElementById('PassportNumber');
+        const PassportIssuedDate = document.getElementById('PassportIssuedDate');
+        const NameInDriverLicense = document.getElementById('NameInDriverLicense');
+        const DriverLicenseNumber = document.getElementById('DriverLicenseNumber');
+        const DriverLicenseIssuedDate = document.getElementById('DriverLicenseIssuedDate');
+        const AppointmentDate = document.getElementById('AppointmentDate');
+
+        form.addEventListener('submit', function(e){
+            e.preventDefault();
+
+            const FullNameValue = FullName.value;
+            const FullName1Value = FullName.value;
+            const FullName2Value = FullName.value;
+            const FullName3Value = FullName.value;
+            const AddressValue = Address.value;
+            const PassportNumberValue = PassportNumber.value;
+            const PassportIssuedDateValue = PassportIssuedDate.value;
+            const NameInDriverLicenseValue = NameInDriverLicense.value;
+            const NameInDriverLicense1Value = NameInDriverLicense.value;
+            const DriverLicenseNumberValue = DriverLicenseNumber.value;
+            const DriverLicenseIssuedDateValue = DriverLicenseIssuedDate.value;
+            const AppointmentDateValue = AppointmentDate.value;
+
+            localStorage.setItem('fullname', FullNameValue);
+            localStorage.setItem('fullname1', FullName1Value);
+            localStorage.setItem('fullname2', FullName1Value);
+            localStorage.setItem('fullname3', FullName1Value);
+            localStorage.setItem('address', AddressValue);
+            localStorage.setItem('passportnumber', PassportNumberValue);
+            localStorage.setItem('passportissueddate', PassportIssuedDateValue);
+            localStorage.setItem('nameindriverlicense', NameInDriverLicenseValue);
+            localStorage.setItem('nameindriverlicense1', NameInDriverLicense1Value);
+            localStorage.setItem('driverlicensenumber', DriverLicenseNumberValue);
+            localStorage.setItem('driverlicenseissueddate', DriverLicenseIssuedDateValue);
+            localStorage.setItem('appointmentdate', AppointmentDateValue);
+
+            window.location.href = "affidavit.html";
+        })
+
+        </script>
+    </body>
+
+</html>
