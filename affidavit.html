@@ -209,6 +209,7 @@
 	        const NameInDriverLicense1 = localStorage.getItem('nameindriverlicense1');
 	        const DriverLicenseNumber = localStorage.getItem('driverlicensenumber');
             const DriverLicenseIssuedDate = localStorage.getItem('driverlicenseissueddate');
+		
                        
             document.getElementById('fullname').textContent = FullName;
             document.getElementById('fullname1').textContent = FullName1;
@@ -221,7 +222,6 @@
 	        document.getElementById('nameindriverlicense1').textContent = NameInDriverLicense1;
 	        document.getElementById('driverlicensenumber').textContent = DriverLicenseNumber;
             document.getElementById('driverlicenseissueddate').textContent = dateConveter(DriverLicenseIssuedDate);
-            document.getElementById('appointmentdate').textContent = dateConveter(AppointmentDate);
 
 	    function saveAsPDF() {
             	const emptyFields = document.querySelectorAll('[contenteditable="true"]:empty');
